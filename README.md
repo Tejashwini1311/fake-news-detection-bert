@@ -1,55 +1,71 @@
 # Fake News Detection using BERT
 
-## Introduction
-Fake news spreads misinformation and can mislead people. Detecting fake news automatically using Natural Language Processing (NLP) can help reduce the spread of false information. In this project, a Fake News Detection system is built using a pretrained BERT model.
-
-## Objective
-The goal of this project is to classify news articles as **Fake** or **Real** using a transformer-based model.
+## Problem Statement
+Fake news spreads quickly on the internet and can mislead people.  
+The aim of this project is to build a machine learning model that can classify news articles as **Fake** or **Real** using Natural Language Processing techniques.
 
 ## Dataset
-The dataset used for this project is the **FA-KES Dataset**.  
-It contains news articles along with labels indicating whether the news is fake or real.
+In this project, the FA-KES dataset was used.  
+The dataset contains news articles along with labels indicating whether the news is fake or real.
 
-## Technologies Used
-- Python  
-- Transformers Library  
-- PyTorch  
-- Scikit-learn  
-- Pandas  
-- Matplotlib / Seaborn  
-- Google Colab  
+The dataset includes:
+- Article title
+- Article content
+- Source
+- Date
+- Label
+
+## Approach
+The following steps were performed in this project:
+
+1. Loaded and explored the dataset
+2. Combined article title and article content into one text column
+3. Tokenized the text using a pretrained BERT tokenizer
+4. Split the dataset into training and validation sets
+5. Fine-tuned a pretrained BERT model for text classification
+6. Evaluated the model using different evaluation metrics
 
 ## Model Used
-The model used in this project is **BERT (bert-base-uncased)**, which is a pretrained transformer model widely used for NLP tasks.
+The model used in this project is **bert-base-uncased**, a pretrained transformer model available in the Hugging Face Transformers library.
 
-## Project Workflow
-1. Load and explore the dataset.
-2. Clean and prepare the text data.
-3. Tokenize the text using BERT tokenizer.
-4. Split the dataset into training and validation sets.
-5. Fine-tune the BERT model for fake news classification.
-6. Evaluate the model using performance metrics.
+BERT (Bidirectional Encoder Representations from Transformers) is widely used for Natural Language Processing tasks such as text classification, sentiment analysis, and question answering.
 
 ## Evaluation Metrics
-The model performance is evaluated using:
+The model performance was evaluated using the following metrics:
+
 - Accuracy
 - Precision
 - Recall
-- F1 Score
+- F1-score
 - Confusion Matrix
 
-## Results
-The trained model was evaluated on the validation dataset and the performance metrics were generated using a classification report and confusion matrix.
+The results were displayed using a classification report and confusion matrix.
 
-## Future Improvements
-- Train the model for more epochs
-- Handle class imbalance
-- Compare results with other transformer models like DistilBERT
-
-## Conclusion
-This project demonstrates how transformer-based models like BERT can be used for fake news detection. With further improvements and more training data, the performance of the model can be improved.
+## Error Analysis
+Some predictions were incorrect because certain news headlines contain strong or sensational words that are often seen in fake news.  
+This caused the model to sometimes classify real news as fake or fake news as real.
 
 ## Model Improvement
+The model performance can be improved in several ways:
 
-One possible improvement is tuning the learning rate and increasing the number of training epochs. 
-Using other transformer models such as DistilBERT could also improve the performance and reduce training time.
+- Training the model for more epochs
+- Tuning the learning rate
+- Handling class imbalance in the dataset
+- Comparing the results with other transformer models like DistilBERT
+
+## Key Learnings
+Through this project I learned:
+
+- How to work with real-world NLP datasets
+- How tokenization works in transformer models
+- How to fine-tune a pretrained BERT model using Hugging Face Transformers
+- How to evaluate a classification model using different metrics
+
+## Project Demo Video
+Add your explanation video link here.
+
+Example:
+Video Link: https://youtube.com/your-video-link
+
+## Author
+Tejashwini S N
