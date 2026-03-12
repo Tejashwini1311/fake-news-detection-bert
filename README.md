@@ -49,5 +49,7 @@ The trained model was evaluated on the validation dataset and the performance me
 ## Conclusion
 This project demonstrates how transformer-based models like BERT can be used for fake news detection. With further improvements and more training data, the performance of the model can be improved.
 
-## Author
-Tejashwini S N 
+## Model Improvement
+
+One possible improvement is tuning the learning rate and increasing the number of training epochs. 
+Using other transformer models such as DistilBERT could also improve the performance and reduce training time.
